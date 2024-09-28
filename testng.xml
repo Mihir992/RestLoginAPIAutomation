@@ -3,7 +3,7 @@
 <suite name="LoginAPISuite">
 
     <listeners>
-        <listener  class-name="api.utils.ExtentReport" />
+        <listener  class-name="com.qa.utils.ExtentReport" />
     </listeners>
 
     <test thread-count="1" name="LoginAPITests">
