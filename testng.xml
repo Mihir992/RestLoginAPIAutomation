@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LoginAPISuite">
+
+    <listeners>
+        <listener  class-name="api.utils.ExtentReport" />
+    </listeners>
+
+    <test thread-count="1" name="LoginAPITests">
+        <classes>
+            <class name="testScript.TestLoginAPI"/>
+        </classes>
+    </test>
+</suite>
