@@ -4,8 +4,9 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import java.io.File;
 import java.nio.file.Paths;
+import org.testng.ITestListener;
 
-public class ExtentReport {
+public class ExtentReport implements ITestListener{
     private static ExtentReports extent;
     private static ExtentTest test;
 
