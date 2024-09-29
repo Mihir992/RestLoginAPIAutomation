@@ -2,8 +2,8 @@ package com.qa.endpoints;
 
 public class Routes {
 
-    public static String base_url = "https://api.escuelajs.co/api/v1/";
+    //public static String base_url = "http://reqres.in/";
 
     //Login module
-    public static String login_url = base_url+"/auth/login";
+    public static String login_url = "https://reqres.in/api/login";
 }
