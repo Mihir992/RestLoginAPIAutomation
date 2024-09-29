@@ -11,13 +11,15 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import java.io.IOException;
 
+import static com.qa.utils.ExtentReport.flushReports;
 import static com.qa.utils.FileUtils.saveTokenToFile;
 
 public class TestLoginAPI {
 
+    ExtentReport report = new ExtentReport();
     @BeforeClass
     public void setUp(){
-        ExtentReport.initReports();
+        report.initReports();
     }
 
     @DataProvider(name = "loginData")
@@ -50,8 +52,8 @@ public class TestLoginAPI {
         }
 
     @AfterClass
-    public void tearDown(){
-        ExtentReport.flushReports();
+    public void tearDown() {
+        flushReports(); // Call flushReports to ensure the report is saved
     }
 }
 
