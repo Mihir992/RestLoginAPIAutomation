@@ -26,7 +26,7 @@ public class TestLoginAPI {
         return ExcelUtils.getDataFromExcel();
     }
 
-    @Test(dataProvider = "loginData")
+    /*@Test(dataProvider = "loginData")
     public void testLogin(String email, String password) throws IOException {
         try
         {
@@ -36,8 +36,18 @@ public class TestLoginAPI {
             saveTokenToFile(token);
         } catch (AssertionError e) {
             System.err.println("Login failed: " + e.getMessage());
+        }*/
+
+        @Test(dataProvider = "loginData")
+        public void testLogin(String email, String password) throws IOException {
+            try {
+                String encodedCredentials = LoginEndpoint.performLogin(email, password);
+                System.out.println("Base64-encoded credentials: " + encodedCredentials);
+            } catch (AssertionError e) {
+                System.err.println("Login failed: " + e.getMessage());
+            }
+
         }
-    }
 
     @AfterClass
     public void tearDown(){
